@@ -1,3 +1,4 @@
 @echo off
-javac -cp json.jar Bot.java
-java -cp .;json.jar Bot
+make 1>&2
+if %errorlevel% neq 0 exit /b %errorlevel%
+java -cp ".;json.jar" Bot
